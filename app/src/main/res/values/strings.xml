@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">f23_3175_g12_serenitysoundsapplication</string>
+    <string name="txtLogin">Login</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtPassword">Password</string>
+    <string name="txtBtnLogin">Login</string>
+    <string name="txtSerenitySounds">Serenity Sounds</string>
+    <string name="txtCreateAccount">Create Account</string>
+    <string name="txtBtnCreateAccount">Create Account</string>
+    <string name="txtCreatePasswordAgain">Password Again</string>
+    <string name="txtMediaPlayer">Media Player</string>
+    <string name="txtBtnDonation">Donation</string>
 </resources>
