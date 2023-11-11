@@ -19,4 +19,5 @@
     <string name="txtMainSchedule">Go Schedule</string>
     <string name="txtBackFromSchedule">Back to Main</string>
     <string name="txtBackFromMediaPlayer">Back to Main</string>
+    <string name="hello_blank_fragment" />
 </resources>

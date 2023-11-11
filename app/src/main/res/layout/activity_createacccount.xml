@@ -45,11 +45,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/txtBtnCreateAccount"
         android:onClick="createAccount"
+        android:text="@string/txtBtnCreateAccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plnTxtCreatePasswordAgain" />
+        app:layout_constraintTop_toBottomOf="@+id/plnTxtCreatePasswordAgain"
+        tools:text="Create Account" />
 
     <EditText
         android:id="@+id/plnTxtCreateEmail"
