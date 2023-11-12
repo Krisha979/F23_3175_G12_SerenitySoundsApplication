@@ -20,4 +20,6 @@
     <string name="txtBackFromSchedule">Back to Main</string>
     <string name="txtBackFromMediaPlayer">Back to Main</string>
     <string name="hello_blank_fragment" />
+    <string name="navigation_drawer_open">Open Drawer</string>
+    <string name="navigation_drawer_close">Close Drawer</string>
 </resources>

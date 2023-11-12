@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- ... other style items ... -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+        <!-- Custom theme with overlay -->
+        <style name="AppTheme.Overlay">
+            <item name="android:colorBackground">@color/white</item>
+            <item name="android:textColor">@color/colorPrimary</item>
+            <!-- Add more customizations as needed -->
+        </style>
+
+
+</resources>
