@@ -48,8 +48,17 @@
             android:background="@android:color/transparent"
             app:popupTheme="@style/AppTheme"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:titleTextColor="@android:color/white"/>
-
+            app:titleTextColor="@color/colorPrimaryDark">
+        <!-- Profile Picture on the Right -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_profile"
+            android:scaleType="centerCrop"/>
+    </androidx.appcompat.widget.Toolbar>
         <!-- FrameLayout for Fragments -->
         <FrameLayout
             android:id="@+id/fragment_container"
@@ -70,14 +79,15 @@
     </RelativeLayout>
 
     <!-- Left-side Navigation Drawer -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"/>
-
-</androidx.drawerlayout.widget.DrawerLayout>
+    <!-- Left-side Navigation Drawer -->
+<com.google.android.material.navigation.NavigationView
+android:id="@+id/nav_view"
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:layout_gravity="start"
+android:fitsSystemWindows="true"
+app:headerLayout="@layout/nav_header"
+app:menu="@menu/nav_menu"
+    app:background="@color/colorPrimaryDark" />
+    </androidx.drawerlayout.widget.DrawerLayout>
 

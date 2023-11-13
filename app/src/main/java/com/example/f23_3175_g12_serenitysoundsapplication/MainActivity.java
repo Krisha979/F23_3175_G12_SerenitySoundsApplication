@@ -9,10 +9,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         // Find views
         drawer = findViewById(R.id.drawer_layout);
@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
         // Set up the Toolbar as your transparent action bar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
 
         // Set up the Navigation Drawer
         toggle = new ActionBarDrawerToggle(
@@ -46,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        toggle.getDrawerArrowDrawable().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_IN);
+
 // Handle item clicks in the Navigation Drawer
         navigationView.setNavigationItemSelectedListener(item -> {
             // Handle navigation item clicks here

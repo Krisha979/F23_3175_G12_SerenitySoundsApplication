@@ -9,7 +9,7 @@
 
         <!-- Custom theme with overlay -->
         <style name="AppTheme.Overlay">
-            <item name="android:colorBackground">@color/white</item>
+            <item name="android:colorBackground">@color/colorPrimaryDark</item>
             <item name="android:textColor">@color/colorPrimary</item>
             <!-- Add more customizations as needed -->
         </style>
