@@ -26,7 +26,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new LocationFragment())
+                    .commit();
+        }
         // Find views
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
