@@ -56,7 +56,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
         addMarker(googleMap, Home, "Home", "Your Home Description");
 
         // Optionally, move the camera to a specific location (e.g., Home)
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Home, 13.0f));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Home, 10.0f));
     }
 
     private void addMarker(GoogleMap googleMap, LatLng position, String title, String snippet) {
