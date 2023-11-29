@@ -25,5 +25,6 @@
     <string name="navigation_drawer_close">Close Drawer</string>
     <string name="txtBackToMain">Back to Main</string>
     <string name="UserName">User Name</string>
+    <string name="txtShowImage">Show Image</string>
 
 </resources>

@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 new HomeFragment()).commit();
     }
 
-    private BottomNavigationView.OnItemSelectedListener navListener =
+    private final BottomNavigationView.OnItemSelectedListener navListener =
             new BottomNavigationView.OnItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {

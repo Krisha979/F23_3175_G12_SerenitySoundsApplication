@@ -4,167 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/white"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
+
     <TextView
         android:id="@+id/greetingTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Good Morning!"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginTop="16dp"
+        android:text="Let's Meditate!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- How are you feeling today? -->
     <TextView
         android:id="@+id/feelingTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How are you feeling today?"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/greetingTextView"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"/>
-
-    <!-- Horizontal scrollable modes -->
-    <HorizontalScrollView
-        android:id="@+id/modesScrollView"
+        android:text="How are you feeling today?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/greetingTextView" />
+    <GridView
+        android:id="@+id/gridViewMeditationTypes"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/feelingTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <!-- Mode item with icon and square container -->
-            <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@color/colorPrimaryDark"
-                android:layout_marginEnd="8dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/profile_image"
-                    android:layout_centerInParent="true"/>
-            </RelativeLayout>
-
-            <!-- Add more mode items as needed -->
-            <!-- Sleep mode -->
-            <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@color/colorPrimaryDark"
-                android:layout_marginEnd="8dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/profile_image"
-                    android:layout_centerInParent="true"/>
-            </RelativeLayout>
-
-            <!-- Focus mode -->
-            <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@color/colorPrimaryDark">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/profile_image"
-                    android:layout_centerInParent="true"/>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@color/colorPrimaryDark"
-                android:layout_marginEnd="8dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/profile_image"
-                    android:layout_centerInParent="true"/>
-            </RelativeLayout>
-
-            <!-- Focus mode -->
-            <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@color/colorPrimaryDark">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/profile_image"
-                    android:layout_centerInParent="true"/>
-            </RelativeLayout>
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <Button
-        android:id="@+id/btnMainLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
-        android:onClick="openLoginPage"
-        android:text="@string/txtMainLogin"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/feelingTextView"
+        app:layout_constraintVertical_bias="0.17000002" />
 
-    <Button
-        android:id="@+id/btnMainCreateAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnMainCreateAccount"
-        android:onClick="openCreateAccountPage"
+    <ImageView
+        android:id="@+id/imgViewLarge"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMainLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/gridViewMeditationTypes"
+        app:srcCompat="@drawable/calm" />
+    <!-- Horizontal scrollable modes -->
 
-    <Button
-        android:id="@+id/btnMainMediaPlayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtMainMediaPlayer"
-        android:onClick="openMediaPlayerPage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMainCreateAccount" />
-
-    <Button
-        android:id="@+id/btnMainSchedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txtMainSchedule"
-        android:onClick="openSchedulePage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMainMediaPlayer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

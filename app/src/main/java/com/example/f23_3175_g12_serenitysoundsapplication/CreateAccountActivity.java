@@ -41,7 +41,7 @@ SerenityDatabase serenityDatabase;
         dobEditText = findViewById(R.id.editTextDob);
 
         serenityDatabase = Room.databaseBuilder(
-                        getApplicationContext(), SerenityDatabase.class, "serenity.db")
+                        getApplicationContext(), SerenityDatabase.class, "serenityDatabase.db")
                 .build();
 
         Button createAccountButton = findViewById(R.id.btnCreateAccount);
