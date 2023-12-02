@@ -4,11 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MusicFragment">
+    <!-- ImageView for the GIF background -->
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/imageViewBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/music_playerbg" />
+
+    <!--Button for playing audio-->
+    <!-- JcPlayerView -->
+    <TextView
+        android:id="@+id/textViewtitlePlaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:text="@string/textViewPlayTitle"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="230dp" />
+
+    <com.example.jean.jcplayer.view.JcPlayerView
+        android:id="@+id/jcplayer"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="500dp"
+        android:visibility="visible" />
 
 </FrameLayout>

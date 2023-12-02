@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -33,6 +34,11 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.firebase:firebase-storage:20.3.0'
+    implementation 'com.google.firebase:firebase-database:20.3.0'
+    implementation 'com.github.jeancsanchez:JcPlayer:2.7.2'
+    implementation 'com.karumi:dexter:6.2.3'
+
     def room_version = "2.6.0"
 
     implementation "androidx.room:room-runtime:$room_version"
