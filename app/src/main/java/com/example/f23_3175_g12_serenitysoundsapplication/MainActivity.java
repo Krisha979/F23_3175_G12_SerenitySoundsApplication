@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     } else if (item.getItemId() == R.id.navigation_location) {
                         selectedFragment = new LocationFragment();
                     } else if (item.getItemId() == R.id.navigation_profile) {
-                        selectedFragment = new ProfileFragment();
+                        selectedFragment = new ScheduleFragment();
                     }
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
