@@ -37,6 +37,8 @@ public class AlarmReceiver extends BroadcastReceiver {
                 stopMediaPlayer();
             }
         }, STOP_DELAY);
+        // Call showNotification to display the notification
+        showNotification(context, title);
     }
     private void stopMediaPlayer() {
         if (mp != null && mp.isPlaying()) {
@@ -56,7 +58,8 @@ public class AlarmReceiver extends BroadcastReceiver {
         }
 
         // Create an intent for launching the app when the notification is clicked
-        Intent launchIntent = new Intent(context, ScheduleFragment.class);
+        Intent launchIntent = new Intent(context, MainActivity.class);
+
         launchIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, launchIntent, PendingIntent.FLAG_IMMUTABLE);
 

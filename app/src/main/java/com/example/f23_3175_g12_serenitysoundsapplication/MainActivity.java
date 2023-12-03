@@ -13,6 +13,9 @@ import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -32,36 +35,28 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.fragment_container, new LocationFragment())
                     .commit();
         }
-        // Find views
-        drawer = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
 
         // Set up the Toolbar as your transparent action bar
-        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
-        // Set up the Navigation Drawer
-        toggle = new ActionBarDrawerToggle(
-                this,
-                drawer,
-                toolbar,
-                R.string.navigation_drawer_open,
-                R.string.navigation_drawer_close);
+        // Customize the toolbar with app name
+        TextView appName = findViewById(R.id.app_name);
 
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        toggle.getDrawerArrowDrawable().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.SRC_IN);
-
-// Handle item clicks in the Navigation Drawer
-        navigationView.setNavigationItemSelectedListener(item -> {
-            // Handle navigation item clicks here
-            // For example, you can switch fragments or start activities
-            return true;
+        // Customize the toolbar with sign-out button
+        Button signOutButton = findViewById(R.id.sign_out_button);
+        signOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Handle sign-out action here (e.g., navigate to login screen)
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();  // Optional: Close the current activity
+            }
         });
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(navListener);
@@ -75,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
-
                     if (item.getItemId() == R.id.navigation_home) {
                         selectedFragment = new HomeFragment();
                     } else if (item.getItemId() == R.id.navigation_music) {

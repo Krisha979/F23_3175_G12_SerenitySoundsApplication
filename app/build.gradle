@@ -38,6 +38,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:20.3.0'
     implementation 'com.github.jeancsanchez:JcPlayer:2.7.2'
     implementation 'com.karumi:dexter:6.2.3'
+   // implementation "androidx.core:core:2.2.0"
 
     def room_version = "2.6.0"
 

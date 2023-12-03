@@ -64,6 +64,14 @@ public class ScheduleFragment extends Fragment {
             }
         });
         addReminder("Sample Reminder", System.currentTimeMillis() + 60000); // 1 minute from now
+        ImageButton powerButton = view.findViewById(R.id.powerButton);
+        powerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Handle logout here
+                logout();
+            }
+        });
         return view;
     }
     private void showAddReminderDialog() {
@@ -104,6 +112,14 @@ public class ScheduleFragment extends Fragment {
                 sdb.reminderDao().insert(reminder);
             }
         }).start();
+    }
+    // New method for handling logout
+    public void logout() {
+        // Implement your logout logic here
+        // For example, you can start a new LoginActivity and finish the current activity/fragment
+        Intent intent = new Intent(requireContext(), LoginActivity.class);
+        startActivity(intent);
+        requireActivity().finish(); // Finish the current activity if needed
     }
 
 }

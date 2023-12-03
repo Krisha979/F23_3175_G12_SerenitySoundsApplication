@@ -27,13 +27,6 @@ public class Reminder {
     public Reminder() {
     }
 
-    public Reminder(long id, String title, String description, long timestamp) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.timestamp = timestamp;
-    }
-
     public long getId() {
         return id;
     }

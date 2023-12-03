@@ -82,27 +82,32 @@ SerenityDatabase serenityDatabase;
         String email = emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
         String dob = dobEditText.getText().toString();
+        Toast.makeText(this, "Check", Toast.LENGTH_SHORT).show();
 
         // Check if the email is unique (optional)
-        if (serenityDatabase.userDao().getUserByEmail(email) != null) {
-            Toast.makeText(this, "Email already exists", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        if (serenityDatabase.userDao().getUserByEmail(email) != null) {
+//            Toast.makeText(this, "Email already exists", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
 
         User newUser = new User();
         newUser.setName(name);
         newUser.setEmail(email);
         newUser.setPassword(password);
+        newUser.setDob("1990-01-01");
+        serenityDatabase.userDao().insert(newUser);
+
+
         // Parse the dob string to Date (you may want to add error handling here)
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-        try {
-            String dobDate = sdf.parse(dob).toString();
-            newUser.setDob(dobDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-            // Handle the parsing error
-            return;
-        }
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+//        try {
+//            String dobDate = (sdf.parse(dob)).toString();
+//            newUser.setDob(dobDate);
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//            // Handle the parsing error
+//            return;
+//        }
         // Perform account creation and insertion using Room Database
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.execute(new Runnable() {

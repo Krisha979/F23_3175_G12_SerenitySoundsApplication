@@ -19,7 +19,7 @@
         android:id="@+id/textViewtitlePlaylist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="150dp"
         android:text="@string/textViewPlayTitle"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
@@ -30,15 +30,15 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:layout_marginTop="230dp" />
+        android:layout_height="220dp"
+        android:layout_marginTop="190dp" />
 
     <com.example.jean.jcplayer.view.JcPlayerView
         android:id="@+id/jcplayer"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="420dp"
         android:visibility="visible" />
 
 </FrameLayout>

@@ -41,6 +41,8 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
 
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.mapFragment);
         mapFragment.getMapAsync(this);
+     //   /*SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.mapFragment);
+       // mapFragment.getMapAsync(this);*/
     }
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -50,10 +52,10 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
         LatLng Home = new LatLng(49.1126784, 122.8406784);
 
         // Add markers
-        addMarker(googleMap, douglasNW, "Douglas NW", "Description for Douglas NW");
-        addMarker(googleMap, douglasC, "Douglas Central", "Description for Douglas Central");
-        addMarker(googleMap, KingGeorge, "King George", "Description for King George");
-        addMarker(googleMap, Home, "Home", "Your Home Description");
+        addMarker(googleMap, douglasNW, "Douglas NW Meditation", "Very peaceful Place");
+        addMarker(googleMap, douglasC, "Douglas Central Meditation", "Description for Douglas Central");
+        addMarker(googleMap, KingGeorge, "King George Yoga Center", "Description for King George");
+        addMarker(googleMap, Home, "Home Meditation", "Your Home Description");
 
         // Optionally, move the camera to a specific location (e.g., Home)
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Home, 10.0f));
